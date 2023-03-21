@@ -57,3 +57,7 @@ if excluded_list:
 
 routing_parameters = json.dumps(routing_parameters, indent=2)
 st.code(routing_parameters, language="json")
+
+if st.button("Celebrate shipment!"):
+    st.balloons()
+
