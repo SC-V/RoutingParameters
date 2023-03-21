@@ -1,8 +1,8 @@
 import json
 import streamlit as st
 
-st.markdown(f"# Orders load and routing")
-st.subheader("Get routing parameters", anchor=None)
+st.markdown(f"# Get routing parameters")
+st.subheader("Specify parameters below, then copy-paste them to /manual-routing in tariff editor", anchor=None)
 
 interval_start, interval_end = st.select_slider(
     'Select delivery window',
