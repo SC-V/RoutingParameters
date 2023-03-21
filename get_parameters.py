@@ -1,8 +1,5 @@
-import requests
 import json
-import pandas as pd
 import streamlit as st
-from io import BytesIO
 
 st.markdown(f"# Orders load and routing")
 st.subheader("Get routing parameters", anchor=None)
