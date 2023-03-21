@@ -29,7 +29,7 @@ with col_qual:
 with col_excl:
     excluded_list = st.text_area('Claims to exclude from routing', height=200, help='Copy and paste from the route reports app if you need to exclude claims from routing')
     if excluded_list:
-        excluded_list = orders_list.split()
+        excluded_list = excluded_list.split()
 
 st.write('Delivery window from', interval_start, 'to', interval_end, "–",
          str(int(interval_end) - int(interval_start)), "hours, Chile time (GMT-3).\n",
