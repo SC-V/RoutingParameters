@@ -36,7 +36,7 @@ st.write('Delivery window from', interval_start, 'to', interval_end, "–",
          "Routing for no more than", str(couriers), "couriers, with maximum parcels per courier of", str(units))
 
 routing_parameters = {
-    "group_id": "mexico sc",
+    "group_id": "chile sc",
     "routing_settings_overrides": {
         "quality": quality,
         "delivery_guarantees": {
