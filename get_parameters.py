@@ -8,12 +8,14 @@ country = st.selectbox('Country', ["Mexico", "Chile", "UAE"], index=0, help='Def
 country_timezones = {
     "Mexico": "-06:00",
     "Chile": "-03:00",
-    "UAE": "+03:00"
+    "UAE": "+03:00",
+    "Turkey (Vize Test)": "+03:00"
 }
 country_sorting_centers = {
     "Mexico": "mexico sc",
     "Chile": "chile sc",
-    "UAE": "Dubai sc"  
+    "UAE": "Dubai sc",
+    "Turkey (Vize Test)": "vize sc test"
 }
 country_timezone = country_timezones[country]
 sorting_center = country_sorting_centers[country]
