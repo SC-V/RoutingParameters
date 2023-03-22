@@ -50,7 +50,7 @@ st.write('Delivery window from', interval_start, 'to', interval_end, f"{country}
          "Routing for no more than", str(couriers), "couriers, with maximum parcels per courier of", str(units))
 
 routing_parameters = {
-    "group_id": country_sorting_centers,
+    "group_id": sorting_center,
     "routing_settings_overrides": {
         "quality": quality,
         "delivery_guarantees": {
