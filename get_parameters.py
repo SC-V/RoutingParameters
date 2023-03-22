@@ -10,7 +10,13 @@ country_timezones = {
     "Chile": "-03:00",
     "UAE": "+03:00"
 }
+country_sorting_centers = {
+    "Mexico": "mexico sc",
+    "Chile": "chile sc",
+    "UAE": "Dubai sc"  
+}
 country_timezone = country_timezones[country]
+sorting_center = country_sorting_centers[country]
 
 interval_start, interval_end = st.select_slider(
     'Select delivery window',
@@ -44,7 +50,7 @@ st.write('Delivery window from', interval_start, 'to', interval_end, f"{country}
          "Routing for no more than", str(couriers), "couriers, with maximum parcels per courier of", str(units))
 
 routing_parameters = {
-    "group_id": "chile sc",
+    "group_id": country_sorting_centers,
     "routing_settings_overrides": {
         "quality": quality,
         "delivery_guarantees": {
