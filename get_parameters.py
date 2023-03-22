@@ -39,8 +39,8 @@ with col_excl:
     if excluded_list:
         excluded_list = excluded_list.split()
 
-st.write('Delivery window from', interval_start, 'to', interval_end, "–",
-         str(int(interval_end) - int(interval_start)), f"hours, {country} time (GMT{country_timezone}).\n",
+st.write('Delivery window from', interval_start, 'to', interval_end, f"{country} time (GMT{country_timezone}) –",
+         str(int(interval_end) - int(interval_start)), f"hours, .\n",
          "Routing for no more than", str(couriers), "couriers, with maximum parcels per courier of", str(units))
 
 routing_parameters = {
