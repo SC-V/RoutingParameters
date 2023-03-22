@@ -4,7 +4,7 @@ import streamlit as st
 st.markdown(f"# Get routing parameters")
 st.warning(f"Specify parameters below, then copy-paste them to /manual-routing in tariff editor. Need to add new sorting center? Ask in the SC chat!", icon="⚠️")
 
-country = st.selectbox('Country', ["Mexico", "Chile", "UAE"], index=0, help='Defines a timezone used for routing')
+country = st.selectbox('Country', ["Mexico", "Chile", "UAE", "Turkey (Vize Test)"], index=0, help='Defines a timezone used for routing')
 country_timezones = {
     "Mexico": "-06:00",
     "Chile": "-03:00",
