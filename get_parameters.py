@@ -4,6 +4,14 @@ import streamlit as st
 st.markdown(f"# Get routing parameters")
 st.subheader("Specify parameters below, then copy-paste them to /manual-routing in tariff editor", anchor=None)
 
+country = st.selectbox('Country', ["Mexico", "Chile", "UAE"], index=0, help='Defines a timezone used for routing')
+country_timezones = {
+    "Mexico": "-06:00",
+    "Chile": "-03:00",
+    "UAE": "+03:00"
+}
+country_timezone = country_timezones[country]
+
 interval_start, interval_end = st.select_slider(
     'Select delivery window',
     options=['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10',
@@ -11,17 +19,17 @@ interval_start, interval_end = st.select_slider(
              '22', '23', '24'],
     value=('00', '24'))
 
-deliver_till = "1970-01-02T00:00:00-03:00" if interval_end == '24' else f"1970-01-01T{interval_end}:00:00-03:00"
-start_routing_at = "1970-01-02T00:00:00-03:00" if interval_start == '24' else f"1970-01-01T{interval_start}:00:00-03:00"
+deliver_till = f"1970-01-02T00:00:00{country_timezone}" if interval_end == '24' else f"1970-01-01T{interval_end}:00:00{country_timezone}"
+start_routing_at = f"1970-01-02T00:00:00{country_timezone}" if interval_start == '24' else f"1970-01-01T{interval_start}:00:00{country_timezone}"
 pickup_till = start_routing_at
 
 col_cour, col_unit, col_prox = st.columns(3, gap="medium")
 with col_cour:
     couriers = st.number_input('Maximum number of couriers', value=10, min_value=0, max_value=3000, step=1)
 with col_unit:
-    units = st.number_input('Limit of orders per courier', value=50, min_value=0, max_value=500, step=1)
+    units = st.number_input('Limit of orders per courier', value=35, min_value=0, max_value=500, step=1)
 with col_prox:
-    global_proximity_factor = st.number_input('Proximity factor', value=0.0, min_value=0.0, max_value=10.0, step=0.1)
+    global_proximity_factor = st.number_input('Proximity factor', value=0.3, min_value=0.0, max_value=10.0, step=0.1)
 
 col_qual, col_excl = st.columns(2, gap="medium")
 with col_qual:
@@ -32,7 +40,7 @@ with col_excl:
         excluded_list = excluded_list.split()
 
 st.write('Delivery window from', interval_start, 'to', interval_end, "–",
-         str(int(interval_end) - int(interval_start)), "hours, Chile time (GMT-3).\n",
+         str(int(interval_end) - int(interval_start)), f"hours, {country} time (GMT{country_timezone}).\n",
          "Routing for no more than", str(couriers), "couriers, with maximum parcels per courier of", str(units))
 
 routing_parameters = {
