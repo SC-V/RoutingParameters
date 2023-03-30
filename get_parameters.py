@@ -4,18 +4,41 @@ import streamlit as st
 st.markdown(f"# Get routing parameters")
 st.warning(f"Specify parameters below, then copy-paste them to /manual-routing in tariff editor. Need to add new sorting center? Ask in the SC chat!", icon="⚠️")
 
-country = st.selectbox('Country', ["Mexico", "Chile", "UAE", "Turkey (Vize Test)"], index=0, help='Defines a timezone used for routing')
+country = st.selectbox('Country', 
+                       ["Mexico", "Chile", "UAE", "Turkey (Ankara)", "Turkey (Avcilar)", "Turkey (Bagcilar)", "Turkey (Bakirkoy)",
+                        "Turkey (Basaksehir)", "Turkey (Beyoglu)", "Turkey (Gaziosmanpasa)", "Turkey (Haznedar)", "Turkey (Izmir)",
+                        "Turkey (Sancaktepe)", "Turkey (Vize Test)"], index=0, help='Defines a timezone used for routing')
 country_timezones = {
     "Mexico": "-06:00",
     "Chile": "-03:00",
     "UAE": "+03:00",
+    "Turkey (Ankara)": "+03:00",
+    "Turkey (Avcilar)": "+03:00",
+    "Turkey (Bagcilar)": "+03:00",
+    "Turkey (Bakirkoy)": "+03:00",
+    "Turkey (Basaksehir)": "+03:00",
+    "Turkey (Beyoglu)": "+03:00",
+    "Turkey (Gaziosmanpasa)": "+03:00",
+    "Turkey (Haznedar)": "+03:00",
+    "Turkey (Izmir)": "+03:00",
+    "Turkey (Sancaktepe)": "+03:00",
     "Turkey (Vize Test)": "+03:00"
 }
 country_sorting_centers = {
     "Mexico": "mexico sc",
     "Chile": "chile sc",
     "UAE": "Dubai sc",
-    "Turkey (Vize Test)": "vize sc test"
+    "Turkey (Ankara)": "ankara sc",
+    "Turkey (Avcilar)": "avcilar sc",
+    "Turkey (Bagcilar)": "bagcilar sc",
+    "Turkey (Bakirkoy)": "bakirkoy sc",
+    "Turkey (Basaksehir)": "basaksehir sc",
+    "Turkey (Beyoglu)": "beyoglu sc",
+    "Turkey (Gaziosmanpasa)": "gaziosmanpasa sc",
+    "Turkey (Haznedar)": "haznedar sc",
+    "Turkey (Izmir)": "izmir sc",
+    "Turkey (Sancaktepe)": "sancaktepe sc",
+    "Turkey (Vize Test)": "vize sc test",
 }
 country_timezone = country_timezones[country]
 sorting_center = country_sorting_centers[country]
