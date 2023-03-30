@@ -54,7 +54,7 @@ deliver_till = f"1970-01-02T00:00:00{country_timezone}" if interval_end == '24' 
 start_routing_at = f"1970-01-02T00:00:00{country_timezone}" if interval_start == '24' else f"1970-01-01T{interval_start}:00:00{country_timezone}"
 pickup_till = start_routing_at
 
-orders_estimate = st.number_input('Estimated number of orders', value=350, min_value=0, max_value=1000000, step=1)
+orders_estimate = st.number_input(':box: Estimated number of orders', value=350, min_value=0, max_value=1000000, step=1)
 
 col_cour, col_unit, col_prox = st.columns(3, gap="medium")
 with col_cour:
@@ -62,7 +62,7 @@ with col_cour:
 with col_unit:
     units = st.number_input('Limit of orders per courier', value=35, min_value=0, max_value=500, step=1)
 with col_prox:
-    global_proximity_factor = st.number_input('Proximity factor', value=0.3, min_value=0.0, max_value=10.0, step=0.1)
+    global_proximity_factor = st.number_input('Proximity factor', value=0.3, min_value=0.0, max_value=10.0, step=0.1, help='This is not a proximity factor, but a global proximity factor. Proximity factor could be set in SDD settings')
 
 col_qual, col_excl = st.columns(2, gap="medium")
 with col_qual:
