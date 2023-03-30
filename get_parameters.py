@@ -101,7 +101,3 @@ if units * couriers < orders_estimate:
     st.warning(f"Capacity of provided couriers is less than {orders_estimate} – increase either amount of couriers or limit of orders per courier", icon="🚨")
 else:
     st.code(routing_parameters, language="json")
-
-if st.button("Celebrate shipment!"):
-    st.balloons()
-
