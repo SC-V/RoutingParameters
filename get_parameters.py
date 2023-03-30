@@ -54,7 +54,7 @@ deliver_till = f"1970-01-02T00:00:00{country_timezone}" if interval_end == '24' 
 start_routing_at = f"1970-01-02T00:00:00{country_timezone}" if interval_start == '24' else f"1970-01-01T{interval_start}:00:00{country_timezone}"
 pickup_till = start_routing_at
 
-orders_estimate = st.number_input(':box: Estimated number of orders', value=350, min_value=0, max_value=1000000, step=1)
+orders_estimate = st.number_input('📦 Estimated number of orders', value=350, min_value=0, max_value=1000000, step=1, help='Set to control whether you have capacity to deliver estimated amount of parcels')
 
 col_cour, col_unit, col_prox = st.columns(3, gap="medium")
 with col_cour:
