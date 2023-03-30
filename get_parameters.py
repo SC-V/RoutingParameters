@@ -58,9 +58,9 @@ orders_estimate = st.number_input('📦 Estimated number of orders', value=350, 
 
 col_cour, col_unit, col_prox = st.columns(3, gap="medium")
 with col_cour:
-    couriers = st.number_input('Maximum number of couriers', value=10, min_value=0, max_value=3000, step=1)
+    couriers = st.number_input('Limit of number of couriers (MAX)', value=10, min_value=0, max_value=3000, step=1)
 with col_unit:
-    units = st.number_input('Limit of orders per courier', value=35, min_value=0, max_value=500, step=1)
+    units = st.number_input('Limit of orders per courier (MAX)', value=35, min_value=0, max_value=500, step=1)
 with col_prox:
     global_proximity_factor = st.number_input('Global proximity factor', value=0.3, min_value=0.0, max_value=10.0, step=0.1, help='This is not a proximity factor, but a global proximity factor. Proximity factor could be set in SDD settings')
 
