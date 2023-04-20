@@ -7,10 +7,10 @@ st.warning(f"Specify parameters below, then copy-paste them to /manual-routing i
 country = st.selectbox('Country', 
                        ["Mexico", "Chile", "UAE", "Turkey (Ankara)", "Turkey (Avcilar)", "Turkey (Bagcilar)", "Turkey (Bakirkoy)",
                         "Turkey (Basaksehir)", "Turkey (Beyoglu)", "Turkey (Gaziosmanpasa)", "Turkey (Haznedar)", "Turkey (Izmir)",
-                        "Turkey (Sancaktepe)", "Turkey (Vize Test)"], index=0, help='Defines a timezone used for routing')
+                        "Turkey (Sancaktepe)", "Turkey (Vize Test)", "Colombia (Test)"], index=0, help='Defines a timezone used for routing')
 country_timezones = {
     "Mexico": "-06:00",
-    "Chile": "-03:00",
+    "Chile": "-04:00",
     "UAE": "+03:00",
     "Turkey (Ankara)": "+03:00",
     "Turkey (Avcilar)": "+03:00",
@@ -22,7 +22,8 @@ country_timezones = {
     "Turkey (Haznedar)": "+03:00",
     "Turkey (Izmir)": "+03:00",
     "Turkey (Sancaktepe)": "+03:00",
-    "Turkey (Vize Test)": "+03:00"
+    "Turkey (Vize Test)": "+03:00",
+    "Colombia (Test)": "-05:00"
 }
 country_sorting_centers = {
     "Mexico": "mexico sc",
@@ -39,6 +40,7 @@ country_sorting_centers = {
     "Turkey (Izmir)": "izmir sc",
     "Turkey (Sancaktepe)": "sancaktepe sc",
     "Turkey (Vize Test)": "vize sc test",
+    "Colombia (Test)": "Colombia test"
 }
 country_timezone = country_timezones[country]
 sorting_center = country_sorting_centers[country]
