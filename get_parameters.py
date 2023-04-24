@@ -7,7 +7,7 @@ st.warning(f"Specify parameters below, then copy-paste them to /manual-routing i
 country = st.selectbox('Country', 
                        ["Mexico", "Chile", "UAE", "Turkey (Ankara)", "Turkey (Avcilar)", "Turkey (Bagcilar)", "Turkey (Bakirkoy)",
                         "Turkey (Basaksehir)", "Turkey (Beyoglu)", "Turkey (Gaziosmanpasa)", "Turkey (Haznedar)", "Turkey (Izmir)",
-                        "Turkey (Sancaktepe)", "Turkey (Vize Test)", "Colombia (Melonn Bogota)", "Colombia (Melonn Medellin)", "Colombia (Pullman Bogota)", "Colombia (Test)"], index=0, help='Defines a timezone used for routing')
+                        "Turkey (Sancaktepe)", "Turkey (Vize Test)", "Colombia (Melonn Bogota)", "Colombia (Melonn Medellin)", "Colombia (Pullman Bogota)", "Colombia (Sutex Bogota)", "Colombia (Test)"], index=0, help='Defines a timezone used for routing')
 country_timezones = {
     "Mexico": "-06:00",
     "Chile": "-04:00",
@@ -26,6 +26,7 @@ country_timezones = {
     "Colombia (Melonn Bogota)": "-05:00",
     "Colombia (Melonn Medellin)": "-05:00",
     "Colombia (Pullman Bogota)": "-05:00",
+    "Colombia (Sutex Bogota)": "-05:00",
     "Colombia (Test)": "-05:00"
 }
 country_sorting_centers = {
@@ -46,6 +47,7 @@ country_sorting_centers = {
     "Colombia (Melonn Bogota)": "melonn bogota",
     "Colombia (Melonn Medellin)": "melonn medellin",
     "Colombia (Pullman Bogota)": "pullman bogota",
+    "Colombia (Sutex Bogota)": "sutex bogota",
     "Colombia (Test)": "Colombia test"
 }
 country_timezone = country_timezones[country]
