@@ -116,5 +116,7 @@ if excluded_list:
 routing_parameters = json.dumps(routing_parameters, indent=2)
 if units * couriers < orders_estimate:
     st.warning(f"Capacity of provided couriers is less than {orders_estimate} – increase either amount of couriers or limit of orders per courier", icon="🚨")
+elif bucket == "":
+    st.warning(f"You need to set routing bucket, otherwise routing will fail.", icon="🚨")
 else:
     st.code(routing_parameters, language="json")
