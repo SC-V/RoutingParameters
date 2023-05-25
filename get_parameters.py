@@ -114,7 +114,7 @@ if excluded_list:
     routing_parameters["excluded_claims"] = excluded_list
     
 if bucket:
-    routing_parameters["bucket_alias"] = excluded_list
+    routing_parameters["bucket_alias"] = bucket
 
 routing_parameters = json.dumps(routing_parameters, indent=2)
 if units * couriers < orders_estimate:
