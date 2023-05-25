@@ -68,6 +68,11 @@ pickup_till = start_routing_at
 
 orders_estimate = st.number_input('📦 Estimated number of orders', value=350, min_value=0, max_value=1000000, step=1, help='Set to control whether you have capacity to deliver estimated amount of parcels')
 
+if sorting_center == "chile sc":
+  bucket = st.selectbox('Bucket to route', ["", "SDD", "NDD"], index=0, help='Select the bucket.')
+else:
+  bucket = "No buckets for this SC"
+
 col_cour, col_unit, col_prox = st.columns(3, gap="medium")
 with col_cour:
     couriers = st.number_input('Limit of number of couriers (MAX)', value=10, min_value=0, max_value=3000, step=1)
