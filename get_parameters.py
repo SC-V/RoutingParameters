@@ -5,7 +5,7 @@ st.markdown(f"# Get routing parameters")
 st.warning(f"Specify parameters below, then copy-paste them to /manual-routing in tariff editor. Need to add new sorting center? Ask in the SC chat!", icon="⚠️")
 
 country = st.selectbox('Country', 
-                       ["Mexico", "Chile", "UAE", "Turkey (Ankara)", "Turkey (Avcilar)", "Turkey (Bagcilar)", "Turkey (Bakirkoy)",
+                       ["Mexico", "Chile", "Peru", "UAE", "Turkey (Ankara)", "Turkey (Avcilar)", "Turkey (Bagcilar)", "Turkey (Bakirkoy)",
                         "Turkey (Basaksehir)", "Turkey (Beyoglu)", "Turkey (Gaziosmanpasa)", "Turkey (Haznedar)", "Turkey (Izmir)",
                         "Turkey (Sancaktepe)", "Turkey (Vize Test)", "Colombia (Melonn Bogota)", "Colombia (Melonn Medellin)",
                         "Colombia (Pullman Bogota)", "Colombia (Sutex Bogota)","Colombia (La Mansion Bogota)","Colombia (Loto del Sur)" ,
@@ -14,6 +14,7 @@ country_timezones = {
     "Mexico": "-06:00",
     "Chile": "-04:00",
     "UAE": "+03:00",
+    "Peru": "-05:00",
     "Turkey (Ankara)": "+03:00",
     "Turkey (Avcilar)": "+03:00",
     "Turkey (Bagcilar)": "+03:00",
@@ -36,6 +37,7 @@ country_timezones = {
 country_sorting_centers = {
     "Mexico": "mexico sc",
     "Chile": "chile sc",
+    "Peru": "lima sc",
     "UAE": "Dubai sc",
     "Turkey (Ankara)": "ankara sc",
     "Turkey (Avcilar)": "avcilar sc",
