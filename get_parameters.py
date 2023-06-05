@@ -55,7 +55,7 @@ country_sorting_centers = {
     "Colombia (Pullman Bogota)": "pullman bogota",
     "Colombia (Sutex Bogota)": "sutex bogota",
     "Colombia (La Mansion Bogota)": "la mansion bogota",
-    "Colombia (Loto del Sur)": "loto del sur bogota",
+    "Colombia (Loto del Sur)": "loto del sur",
     "Colombia (Test)": "Colombia test"
 }
 country_timezone = country_timezones[country]
