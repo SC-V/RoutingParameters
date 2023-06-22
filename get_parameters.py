@@ -75,8 +75,11 @@ interval_start, interval_end = st.select_slider(
              '22', '23', '24'],
     value=('00', '24'))
 
+dispatch_offset = st.checkbox('Offset 30 minutes at dispatch from warehouse', value=True) if " sc" in sorting_center else st.checkbox('Offset 30 minutes at dispatch from warehouse', value=False)
+offset_minutes = "30" if dispatch_offset else "00"
+
 deliver_till = f"1970-01-02T00:00:00{country_timezone}" if interval_end == '24' else f"1970-01-01T{interval_end}:00:00{country_timezone}"
-start_routing_at = f"1970-01-02T00:00:00{country_timezone}" if interval_start == '24' else f"1970-01-01T{interval_start}:00:00{country_timezone}"
+start_routing_at = f"1970-01-02T00:00:00{country_timezone}" if interval_start == '24' else f"1970-01-01T{interval_start}:{offset_minutes}:00{country_timezone}"
 pickup_till = start_routing_at
 
 orders_estimate = st.number_input('📦 Estimated number of orders', value=350, min_value=0, max_value=1000000, step=1, help='Set to control whether you have capacity to deliver estimated amount of parcels')
