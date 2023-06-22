@@ -75,7 +75,7 @@ interval_start, interval_end = st.select_slider(
              '22', '23', '24'],
     value=('00', '24'))
 
-dispatch_offset = st.checkbox('Offset 30 minutes at dispatch from warehouse', value=True) if " sc" in sorting_center else st.checkbox('Offset 30 minutes at dispatch from warehouse', value=False)
+dispatch_offset = st.checkbox('🆕 Offset 30 minutes at dispatch – to better reflect time spent at warehouse after pickup', value=True) if " sc" in sorting_center else st.checkbox('🆕 Offset 30 minutes at dispatch – to better reflect time spent at warehouse after pickup', value=False)
 offset_minutes = "30" if dispatch_offset else "00"
 
 deliver_till = f"1970-01-02T00:00:00{country_timezone}" if interval_end == '24' else f"1970-01-01T{interval_end}:00:00{country_timezone}"
