@@ -9,7 +9,7 @@ country = st.selectbox('Country',
                         "Turkey (Basaksehir)", "Turkey (Beyoglu)", "Turkey (Gaziosmanpasa)", "Turkey (Haznedar)", "Turkey (Izmir)",
                         "Turkey (Sancaktepe)", "Turkey (Vize Test)", "Colombia (Melonn Bogota)", "Colombia (Melonn Medellin)",
                         "Colombia (Pullman Bogota)", "Colombia (Sutex Bogota)","Colombia (La Mansion Bogota)","Colombia (Loto del Sur)",
-                        "Colombia (Shopping Go)","Colombia (Guia Cereza)","Colombia (Distrihogar)",
+                        "Colombia (Shopping Go)","Colombia (Guia Cereza)","Colombia (Distrihogar)", "Colombia (Wild & Pacific)", "Colombia (Studio F)",
                         "Colombia (Test)"], index=0, help='Defines a timezone used for routing')
 country_timezones = {
     "Mexico": "-06:00",
@@ -35,7 +35,9 @@ country_timezones = {
     "Colombia (Loto del Sur)": "-05:00",
     "Colombia (Shopping Go)": "-05:00",
     "Colombia (Guia Cereza)": "-05:00",
-    "Colombia (Distrihogar)": "-05:00", 
+    "Colombia (Distrihogar)": "-05:00",
+    "Colombia (Wild & Pacific)": "-05:00",
+    "Colombia (Studio F)": "-05:00",
     "Colombia (Test)": "-05:00"
 }
 country_sorting_centers = {
@@ -62,7 +64,9 @@ country_sorting_centers = {
     "Colombia (Loto del Sur)": "loto del sur",
     "Colombia (Shopping Go)": "shopping go bogota",
     "Colombia (Guia Cereza)": "guia cereza bogota",
-    "Colombia (Distrihogar)": "distrihogar medellin", 
+    "Colombia (Distrihogar)": "distrihogar medellin",
+    "Colombia (Wild & Pacific)": "wild medellin",
+    "Colombia (Studio F)": "studio bogota", 
     "Colombia (Test)": "Colombia test"
 }
 country_timezone = country_timezones[country]
