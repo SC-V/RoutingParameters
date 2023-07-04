@@ -65,7 +65,7 @@ country_sorting_centers = {
     "Colombia (Shopping Go)": "shopping go bogota",
     "Colombia (Guia Cereza)": "guia cereza bogota",
     "Colombia (Distrihogar)": "distrihogar medellin",
-    "Colombia (Wild & Pacific)": "wild medellin",
+    "Colombia (Wild & Pacific)": "wildpacific medellin",
     "Colombia (Studio F)": "studio bogota", 
     "Colombia (Test)": "Colombia test"
 }
