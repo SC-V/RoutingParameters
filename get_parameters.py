@@ -10,7 +10,7 @@ country = st.selectbox('Country',
                         "Turkey (Sancaktepe)", "Turkey (Vize Test)", "Colombia (Melonn Bogota)", "Colombia (Melonn Medellin)",
                         "Colombia (Pullman Bogota)", "Colombia (Sutex Bogota)","Colombia (La Mansion Bogota)","Colombia (Loto del Sur)",
                         "Colombia (Shopping Go)","Colombia (Guia Cereza)","Colombia (Distrihogar)", "Colombia (Wild & Pacific)", "Colombia (Studio F)",
-                        "Colombia (Bukz)", "Colombia (Tiendas Branchos Bogota)", "Colombia (Tiendas Branchos Medellin)"
+                        "Colombia (Bukz)", "Colombia (Tiendas Branchos Bogota)", "Colombia (Tiendas Branchos Medellin)", "Colombia (Exiagricola)",
                         "Colombia (Test)"], index=0, help='Defines a timezone used for routing')
 country_timezones = {
     "Mexico": "-06:00",
@@ -42,6 +42,7 @@ country_timezones = {
     "Colombia (Bukz)": "-05:00",
     "Colombia (Tiendas Branchos Bogota)": "-05:00",
     "Colombia (Tiendas Branchos Medellin)": "-05:00",
+    "Colombia (Exiagricola)": "-05:00",
     "Colombia (Test)": "-05:00"
 }
 country_sorting_centers = {
@@ -74,6 +75,7 @@ country_sorting_centers = {
     "Colombia (Bukz)":"bukz medellin",
     "Colombia (Tiendas Branchos Bogota)":"branchos bogota",
     "Colombia (Tiendas Branchos Medellin)":"branchos medellin",
+    "Colombia (Exiagricola)": "exiagricola bogota",
     "Colombia (Test)": "Colombia test"
 }
 country_timezone = country_timezones[country]
